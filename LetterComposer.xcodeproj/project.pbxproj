@@ -13,9 +13,12 @@
 		AA6B9AF9238AECD000785B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6B9AF7238AECD000785B98 /* Main.storyboard */; };
 		AA6B9AFB238AECD100785B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA6B9AFA238AECD100785B98 /* Assets.xcassets */; };
 		AA6B9AFE238AECD100785B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6B9AFC238AECD100785B98 /* LaunchScreen.storyboard */; };
+		AA6B9B06238AEFB600785B98 /* UIImage Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B9B05238AEFB600785B98 /* UIImage Helpers.swift */; };
+		E1A9F7DA5D18937DA674A9AB /* Pods_LetterComposer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB74DE104E26B316A6A9DACC /* Pods_LetterComposer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7AD78287D8E85CEF0FA01433 /* Pods-LetterComposer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetterComposer.release.xcconfig"; path = "Target Support Files/Pods-LetterComposer/Pods-LetterComposer.release.xcconfig"; sourceTree = "<group>"; };
 		AA6B9AEE238AECD000785B98 /* LetterComposer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetterComposer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6B9AF1238AECD000785B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA6B9AF3238AECD000785B98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		AA6B9AFA238AECD100785B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA6B9AFD238AECD100785B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA6B9AFF238AECD100785B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA6B9B05238AEFB600785B98 /* UIImage Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage Helpers.swift"; sourceTree = "<group>"; };
+		C66F8FDA54D1C12D365CF7CC /* Pods-LetterComposer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetterComposer.debug.xcconfig"; path = "Target Support Files/Pods-LetterComposer/Pods-LetterComposer.debug.xcconfig"; sourceTree = "<group>"; };
+		EB74DE104E26B316A6A9DACC /* Pods_LetterComposer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetterComposer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A9F7DA5D18937DA674A9AB /* Pods_LetterComposer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CAEC801B2CBCA118971C6AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C66F8FDA54D1C12D365CF7CC /* Pods-LetterComposer.debug.xcconfig */,
+				7AD78287D8E85CEF0FA01433 /* Pods-LetterComposer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AA6B9AE5238AECD000785B98 = {
 			isa = PBXGroup;
 			children = (
 				AA6B9AF0238AECD000785B98 /* LetterComposer */,
 				AA6B9AEF238AECD000785B98 /* Products */,
+				5CAEC801B2CBCA118971C6AA /* Pods */,
+				D01015CBF64E1E4BCE0348AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +82,17 @@
 				AA6B9AFA238AECD100785B98 /* Assets.xcassets */,
 				AA6B9AFC238AECD100785B98 /* LaunchScreen.storyboard */,
 				AA6B9AFF238AECD100785B98 /* Info.plist */,
+				AA6B9B05238AEFB600785B98 /* UIImage Helpers.swift */,
 			);
 			path = LetterComposer;
+			sourceTree = "<group>";
+		};
+		D01015CBF64E1E4BCE0348AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB74DE104E26B316A6A9DACC /* Pods_LetterComposer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA6B9B02238AECD100785B98 /* Build configuration list for PBXNativeTarget "LetterComposer" */;
 			buildPhases = (
+				CEF7F32011D1FCF5A3DE0A2D /* [CP] Check Pods Manifest.lock */,
 				AA6B9AEA238AECD000785B98 /* Sources */,
 				AA6B9AEB238AECD000785B98 /* Frameworks */,
 				AA6B9AEC238AECD000785B98 /* Resources */,
+				061D6157446C1670B70B0A10 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,11 +163,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		061D6157446C1670B70B0A10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LetterComposer/Pods-LetterComposer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LetterComposer/Pods-LetterComposer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LetterComposer/Pods-LetterComposer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEF7F32011D1FCF5A3DE0A2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LetterComposer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AA6B9AEA238AECD000785B98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA6B9B06238AEFB600785B98 /* UIImage Helpers.swift in Sources */,
 				AA6B9AF6238AECD000785B98 /* ViewController.swift in Sources */,
 				AA6B9AF2238AECD000785B98 /* AppDelegate.swift in Sources */,
 				AA6B9AF4238AECD000785B98 /* SceneDelegate.swift in Sources */,
@@ -282,11 +355,13 @@
 		};
 		AA6B9B03238AECD100785B98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C66F8FDA54D1C12D365CF7CC /* Pods-LetterComposer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R3GMKV289J;
 				INFOPLIST_FILE = LetterComposer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +375,13 @@
 		};
 		AA6B9B04238AECD100785B98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AD78287D8E85CEF0FA01433 /* Pods-LetterComposer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R3GMKV289J;
 				INFOPLIST_FILE = LetterComposer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
