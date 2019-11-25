@@ -33,7 +33,7 @@ final class ViewController: UIViewController {
         ])
         
         letterLabel.text = String(alphabet[0])
-        letterLabel.bringSubviewToFront(canvasView)
+        view.bringSubviewToFront(letterLabel)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,7 +56,7 @@ final class ViewController: UIViewController {
     @IBAction func nextLetter(_ sender: Any) {
         cleanCanvasAndSaveImage()
         position += 1
-        guard position < 1 /*alphabet.count*/ else {
+        guard position < alphabet.count else {
             zipAndShare()
             return
         }
@@ -96,7 +96,7 @@ final class ViewController: UIViewController {
     
     private func preprocessImage() -> UIImage {
         let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 10.0)
-        if let newImage = UIImage(color: .black, size: view.frame.size),
+        if let newImage = UIImage(color: .systemBackground, size: view.frame.size),
             let overlayedImage = newImage.image(
                 byDrawingImage: image,
                 inRect: CGRect(
@@ -131,7 +131,6 @@ final class ViewController: UIViewController {
             for url in urls {
                 try? FileManager.default.removeItem(at: url)
             }
-            try? FileManager.default.removeItem(at: zipURL)
         }
     }
 }
