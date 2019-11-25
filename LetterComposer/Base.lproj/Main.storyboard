@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Compose View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LetterComposer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ComposeViewController" customModule="LetterComposer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQu-R3-Ujh">
-                                <rect key="frame" x="196.5" y="104" width="21" height="38.5"/>
+                                <rect key="frame" x="196.5" y="16" width="21" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -30,11 +30,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="i3L-wl-HXk">
-                        <barButtonItem key="leftBarButtonItem" title="Zip" id="i7e-ot-B0L">
-                            <connections>
-                                <action selector="createZipAndShare:" destination="BYZ-38-t0r" id="fij-1R-hHz"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Zip" id="i7e-ot-B0L">
+                                <connections>
+                                    <action selector="createZipAndShare:" destination="BYZ-38-t0r" id="fij-1R-hHz"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Clean" id="lwS-m8-aax"/>
+                        </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem title="Next Letter" id="rLw-ZK-ARO">
                                 <connections>
@@ -48,13 +51,81 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="letterLabel" destination="FQu-R3-Ujh" id="Bny-6C-1RS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+            <point key="canvasLocation" x="1674" y="-196"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Z8o-Sy-8Jo">
+            <objects>
+                <viewController id="XcH-uC-zLa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RS5-cn-2Ph">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3c-o4-gCX">
+                                <rect key="frame" x="171.5" y="360" width="71" height="30"/>
+                                <state key="normal" title="Composer"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="KVd-wR-8Gg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kib-JC-1jY">
+                                <rect key="frame" x="168.5" y="474" width="77" height="30"/>
+                                <state key="normal" title="Recognizer"/>
+                                <connections>
+                                    <segue destination="1Ef-EQ-9Wu" kind="show" id="2qJ-AR-nuu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Kib-JC-1jY" firstAttribute="centerX" secondItem="s3c-o4-gCX" secondAttribute="centerX" id="2ek-wN-T3G"/>
+                            <constraint firstItem="s3c-o4-gCX" firstAttribute="centerX" secondItem="bVV-vH-FqL" secondAttribute="centerX" id="JjQ-zB-xDF"/>
+                            <constraint firstItem="Kib-JC-1jY" firstAttribute="top" secondItem="s3c-o4-gCX" secondAttribute="bottom" constant="84" id="dgb-ll-98B"/>
+                            <constraint firstItem="s3c-o4-gCX" firstAttribute="centerY" secondItem="bVV-vH-FqL" secondAttribute="centerY" constant="-100" id="sEN-yA-cdd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bVV-vH-FqL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lJu-2m-aDm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q0p-Qc-GR2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="127"/>
+        </scene>
+        <!--Recognizer View Controller-->
+        <scene sceneID="FEX-NM-zPg">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="1Ef-EQ-9Wu" customClass="RecognizerViewController" customModule="LetterComposer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jdK-n5-qqF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ZXb-dc-bLJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zC4-7b-P9g">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Detect" id="HjF-9z-7GX">
+                                <connections>
+                                    <action selector="detectLetter:" destination="1Ef-EQ-9Wu" id="3IX-97-glU"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Clean" id="Wed-81-GlQ">
+                                <connections>
+                                    <action selector="clean:" destination="1Ef-EQ-9Wu" id="D1L-qs-Dwh"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JaM-Vb-Dhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674" y="536"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T5L-24-5dE">
@@ -67,12 +138,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7Xk-rO-qS6"/>
+                        <segue destination="XcH-uC-zLa" kind="relationship" relationship="rootViewController" id="AeJ-fK-jDe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdW-EH-SBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="127"/>
+            <point key="canvasLocation" x="-242" y="127"/>
         </scene>
     </scenes>
 </document>

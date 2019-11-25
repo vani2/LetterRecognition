@@ -3,17 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AA6B9AF2238AECD000785B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B9AF1238AECD000785B98 /* AppDelegate.swift */; };
 		AA6B9AF4238AECD000785B98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B9AF3238AECD000785B98 /* SceneDelegate.swift */; };
-		AA6B9AF6238AECD000785B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B9AF5238AECD000785B98 /* ViewController.swift */; };
 		AA6B9AF9238AECD000785B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6B9AF7238AECD000785B98 /* Main.storyboard */; };
 		AA6B9AFB238AECD100785B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA6B9AFA238AECD100785B98 /* Assets.xcassets */; };
 		AA6B9AFE238AECD100785B98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6B9AFC238AECD100785B98 /* LaunchScreen.storyboard */; };
 		AA6B9B06238AEFB600785B98 /* UIImage Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6B9B05238AEFB600785B98 /* UIImage Helpers.swift */; };
+		AA7E7315238C5AA700001BB2 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E7314238C5AA700001BB2 /* ComposeViewController.swift */; };
+		AA7E7317238C5BE100001BB2 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E7316238C5BE100001BB2 /* RecognizerViewController.swift */; };
+		AA7E7319238C5C7200001BB2 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E7318238C5C7200001BB2 /* CanvasViewController.swift */; };
+		AAFB39E5238C59B800662657 /* LetterClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AAFB39E4238C59B800662657 /* LetterClassifier.mlmodel */; };
 		E1A9F7DA5D18937DA674A9AB /* Pods_LetterComposer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB74DE104E26B316A6A9DACC /* Pods_LetterComposer.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +25,15 @@
 		AA6B9AEE238AECD000785B98 /* LetterComposer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetterComposer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6B9AF1238AECD000785B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA6B9AF3238AECD000785B98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA6B9AF5238AECD000785B98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA6B9AF8238AECD000785B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA6B9AFA238AECD100785B98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA6B9AFD238AECD100785B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA6B9AFF238AECD100785B98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA6B9B05238AEFB600785B98 /* UIImage Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage Helpers.swift"; sourceTree = "<group>"; };
+		AA7E7314238C5AA700001BB2 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		AA7E7316238C5BE100001BB2 /* RecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerViewController.swift; sourceTree = "<group>"; };
+		AA7E7318238C5C7200001BB2 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
+		AAFB39E4238C59B800662657 /* LetterClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = LetterClassifier.mlmodel; sourceTree = "<group>"; };
 		C66F8FDA54D1C12D365CF7CC /* Pods-LetterComposer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetterComposer.debug.xcconfig"; path = "Target Support Files/Pods-LetterComposer/Pods-LetterComposer.debug.xcconfig"; sourceTree = "<group>"; };
 		EB74DE104E26B316A6A9DACC /* Pods_LetterComposer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetterComposer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -50,7 +56,6 @@
 				C66F8FDA54D1C12D365CF7CC /* Pods-LetterComposer.debug.xcconfig */,
 				7AD78287D8E85CEF0FA01433 /* Pods-LetterComposer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -76,12 +81,15 @@
 			isa = PBXGroup;
 			children = (
 				AA6B9AF1238AECD000785B98 /* AppDelegate.swift */,
-				AA6B9AF3238AECD000785B98 /* SceneDelegate.swift */,
-				AA6B9AF5238AECD000785B98 /* ViewController.swift */,
-				AA6B9AF7238AECD000785B98 /* Main.storyboard */,
 				AA6B9AFA238AECD100785B98 /* Assets.xcassets */,
-				AA6B9AFC238AECD100785B98 /* LaunchScreen.storyboard */,
+				AA7E7318238C5C7200001BB2 /* CanvasViewController.swift */,
+				AA7E7314238C5AA700001BB2 /* ComposeViewController.swift */,
 				AA6B9AFF238AECD100785B98 /* Info.plist */,
+				AA6B9AFC238AECD100785B98 /* LaunchScreen.storyboard */,
+				AAFB39E4238C59B800662657 /* LetterClassifier.mlmodel */,
+				AA6B9AF7238AECD000785B98 /* Main.storyboard */,
+				AA7E7316238C5BE100001BB2 /* RecognizerViewController.swift */,
+				AA6B9AF3238AECD000785B98 /* SceneDelegate.swift */,
 				AA6B9B05238AEFB600785B98 /* UIImage Helpers.swift */,
 			);
 			path = LetterComposer;
@@ -210,9 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA7E7315238C5AA700001BB2 /* ComposeViewController.swift in Sources */,
+				AAFB39E5238C59B800662657 /* LetterClassifier.mlmodel in Sources */,
 				AA6B9B06238AEFB600785B98 /* UIImage Helpers.swift in Sources */,
-				AA6B9AF6238AECD000785B98 /* ViewController.swift in Sources */,
 				AA6B9AF2238AECD000785B98 /* AppDelegate.swift in Sources */,
+				AA7E7317238C5BE100001BB2 /* RecognizerViewController.swift in Sources */,
+				AA7E7319238C5C7200001BB2 /* CanvasViewController.swift in Sources */,
 				AA6B9AF4238AECD000785B98 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
