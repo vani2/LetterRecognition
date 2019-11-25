@@ -30,6 +30,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="i3L-wl-HXk">
+                        <barButtonItem key="leftBarButtonItem" title="Zip" id="i7e-ot-B0L">
+                            <connections>
+                                <action selector="createZipAndShare:" destination="BYZ-38-t0r" id="fij-1R-hHz"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Next Letter" id="rLw-ZK-ARO">
                                 <connections>

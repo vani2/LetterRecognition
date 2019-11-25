@@ -17,7 +17,7 @@ final class ViewController: UIViewController {
     private let canvasView = PKCanvasView(frame: .zero)
     private let trainedImageSize = CGSize(width: 28, height: 28)
     private let alphabet: [Character] = ["А", "Б", "В", "Г", "Д", "Е", "Ё", "Ж", "З", "И", "Й", "К", "Л", "М", "Н", "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ц", "Ч", "Ш", "Щ", "Ъ", "Ы", "Ь", "Э", "Ю", "Я"]
-    private var position = 0
+    private var position = 13
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ final class ViewController: UIViewController {
             canvasView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
         ])
         
-        letterLabel.text = String(alphabet[0])
+        letterLabel.text = String(alphabet[position])
         view.bringSubviewToFront(letterLabel)
     }
     
@@ -61,6 +61,10 @@ final class ViewController: UIViewController {
             return
         }
         letterLabel.text = String(alphabet[position])
+    }
+    
+    @IBAction func createZipAndShare(_ sender: Any) {
+        zipAndShare()
     }
     
     private func cleanCanvasAndSaveImage() {
