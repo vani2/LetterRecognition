@@ -79,7 +79,7 @@ final class ViewController: UIViewController {
                 try FileManager.default.createDirectory(at: url, withIntermediateDirectories: false, attributes: nil)
             }
             url.appendPathComponent("\(UUID().uuidString).png")
-        } catch  {
+        } catch {
             print("\(error)")
             return
         }
@@ -127,10 +127,6 @@ final class ViewController: UIViewController {
         }
         
         let activityVC = UIActivityViewController(activityItems: [zipURL], applicationActivities: nil)
-        present(activityVC, animated: true) {
-            for url in urls {
-                try? FileManager.default.removeItem(at: url)
-            }
-        }
+        present(activityVC, animated: true)
     }
 }
