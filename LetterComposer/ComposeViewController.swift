@@ -61,10 +61,8 @@ final class ComposeViewController: CanvasViewController {
     private func cleanCanvasAndSaveImage() {
         guard let data = preprocessImage().pngData() else { return }
         
-        var url: URL
-        
         do {
-            url = try FileManager.default.url(
+            var url = try FileManager.default.url(
                 for: .documentDirectory,
                 in: .userDomainMask,
                 appropriateFor: nil,
@@ -74,13 +72,11 @@ final class ComposeViewController: CanvasViewController {
                 try FileManager.default.createDirectory(at: url, withIntermediateDirectories: false, attributes: nil)
             }
             url.appendPathComponent("\(UUID().uuidString).png")
+            if !FileManager.default.createFile(atPath: url.path, contents: data, attributes: nil) {
+                print("Can't save image")
+            }
         } catch {
             print("\(error)")
-            return
-        }
-        
-        if !FileManager.default.createFile(atPath: url.path, contents: data, attributes: nil) {
-            print("Can't save image")
         }
         
         cleanCanvas()
@@ -93,11 +89,7 @@ final class ComposeViewController: CanvasViewController {
     
     private func createZip() -> URL? {
         do {
-            let url = try FileManager.default.url(
-                for: .documentDirectory,
-                in: .userDomainMask,
-                appropriateFor: nil,
-                create: true)
+            let url = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             let urls = try FileManager.default.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .skipsSubdirectoryDescendants)
             return try Zip.quickZipFiles(urls, fileName: "LettersRawData")
         } catch {

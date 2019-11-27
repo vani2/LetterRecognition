@@ -10,7 +10,7 @@ import UIKit
 
 extension UIImage {
     
-    public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
+    convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
         let rect = CGRect(origin: .zero, size: size)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
         color.setFill()
@@ -58,9 +58,7 @@ extension UIImage {
        let colorspace = CGColorSpaceCreateDeviceGray()
        let bitmapContext = CGContext(data: CVPixelBufferGetBaseAddress(pixelBuffer!), width: width, height: height, bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: colorspace, bitmapInfo: 0)!
 
-       guard let cg = self.cgImage else {
-           return nil
-       }
+       guard let cg = self.cgImage else { return nil }
 
        bitmapContext.draw(cg, in: CGRect(x: 0, y: 0, width: width, height: height))
 
