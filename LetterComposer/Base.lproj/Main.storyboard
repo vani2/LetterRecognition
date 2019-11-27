@@ -36,7 +36,11 @@
                                     <action selector="createZipAndShare:" destination="BYZ-38-t0r" id="fij-1R-hHz"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Clean" id="lwS-m8-aax"/>
+                            <barButtonItem title="Clean" id="lwS-m8-aax">
+                                <connections>
+                                    <action selector="clean:" destination="BYZ-38-t0r" id="yzu-fn-2BN"/>
+                                </connections>
+                            </barButtonItem>
                         </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem title="Next Letter" id="rLw-ZK-ARO">

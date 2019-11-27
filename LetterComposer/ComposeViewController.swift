@@ -42,6 +42,22 @@ final class ComposeViewController: CanvasViewController {
         zipAndShare()
     }
     
+    @IBAction func clean(_ sender: Any) {
+        do {
+            let documentsURL = try FileManager.default.url(
+                for: .documentDirectory,
+                in: .userDomainMask,
+                appropriateFor: nil,
+                create: false)
+            let urls = try FileManager.default.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+            for url in urls {
+                try? FileManager.default.removeItem(at: url)
+            }
+        } catch {
+            print("\(error)")
+        }
+    }
+    
     private func cleanCanvasAndSaveImage() {
         guard let data = preprocessImage().pngData() else { return }
         
